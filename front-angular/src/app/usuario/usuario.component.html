@@ -1,0 +1,15 @@
+<div>
+  <button class="btn btn-primary" routerLink="/users">Regresar</button>
+</div>
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Usuario:{{usuario.nombre}}</h5>
+      <p class="card-text" *ngFor="let tareas of usuario.tareas">Tarea: {{tareas.nombre}}, descripcion: {{tareas.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Apellido: {{usuario.apellido}}</li>
+      <li class="list-group-item">Email: {{usuario.email}}</li>
+      <li class="list-group-item">Password: {{usuario.password}}</li>
+    </ul>
+  </div>

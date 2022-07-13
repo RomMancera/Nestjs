@@ -1,0 +1,54 @@
+<div>
+    <button class="btn btn-warning float-end" routerLink="/users">Ver usuarios</button>
+</div>
+<h1>Users Form</h1>
+<form (ngSubmit)="save(userForm)" #userForm="ngForm">
+
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Nombre</label>
+        <div class="col-sm-9">
+            <input name="nombre" type="text" class="form-control" [(ngModel)]="usuario.nombre" placeholder="Name of the user">
+            <!-- <span class="form-text text-danger">
+                This space is required and more than 4 words
+            </span> -->
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Apellido</label>
+        <div class="col-sm-9">
+            <input name="apellido" type="text" class="form-control" [(ngModel)]="usuario.apellido"  placeholder="last name of the user">
+            <!-- <span class="form-text text-danger">
+                This space is required and more than 4 words
+            </span> -->
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">email</label>
+        <div class="col-sm-9">
+            <input name="email"  type="email" class="form-control" [(ngModel)]="usuario.email"  placeholder="email of the user">
+            <!-- <span class="form-text text-danger">
+                This space is required and more than 4 words
+            </span> -->
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">password</label>
+        <div class="col-sm-9">
+            <input name="password" type="password" class="form-control" [(ngModel)]="usuario.password" placeholder="password of the user">
+            <!-- <span class="form-text text-danger">
+                This space is required and more than 4 words
+            </span> -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button type="submit" class="btn btn-primary float-end">
+                Send information 
+            </button>
+        </div>
+    </div>
+</form>

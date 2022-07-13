@@ -1,0 +1,27 @@
+<div>
+  <button class="btn btn-success" routerLink="/form">Agregar un usuario</button>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">correo</th>
+        <th scope="col">password</th>
+        <th scope="col">actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of usuarios">
+        <th scope="row" >{{u.id}}</th>
+        <td>{{u.nombre}}</td>
+        <td>{{u.apellido}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.password}}</td>
+        <td><button (click)="deleteU(u.id)" class="btn btn-danger">Borrar</button>
+            <button (click)="sendID(u.id)" class="btn btn-success" >Editar</button> 
+            <button (click)="sendId(u.id)" class="btn btn-primary">Ver Más</button> </td>
+      </tr>
+    </tbody>
+  </table>
